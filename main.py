@@ -12,6 +12,8 @@ def addClient(db):
 def getClient(db):
     return db.clients.find_one()
 
+def deleteClient(db):
+    db.clients.delete_one({"name": "X"})
 
 if __name__ == "__main__":
     dataBase = getDataBase()
